@@ -1,0 +1,38 @@
+{% extends "movie_reviews/base.html" %}
+
+{% block content %}
+
+<section id="gridSystem">
+    <p>
+        Movie Sentiment Analyzer is a project that analyzes the sentiment of the reviews on a given movie title and ranks
+        each review page using a basic version of the PageRank algorithm.
+    </p>
+     <p>
+        Sentiment analysis
+     </p>
+    <p>
+        <ol>
+        <li>By querying a movie title the engine makes an automated query to Google or Bing.</li>
+        <li>It saves the urls of the search results and a spider collects the reviews of each page.</li>
+        <li>A Multinomial Naive Bayes Classifier is used to analyse the reviews and classify them into positive or negative.</li>
+        <li>A graphic is displayed with the classification results.</li>
+        </ol>
+    </p>
+    <p>
+        PG Rank
+    </p>
+    <p>
+        <ol>
+        <li>After the sentiment analysis results are displayed, the user can rank the movie review pages by clicking "Calculate Rank".</li>
+        <li>A crawler gathers and travels through each of the review urls with a max depth of 2 and saves the pages and creates links
+        between the visited pages.</li>
+        <li>The engine used the PageRank algorithm to rank each page in the collected page set.</li>
+        </ol>
+    </p>
+
+    <p>
+        This engine is written in Python, Scikit-Learn and NLTK on top of NumPy and SciPy stack. It uses Django for webserver backend.
+    </p>
+</section>
+
+{% endblock content %}
