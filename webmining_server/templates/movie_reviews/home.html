@@ -4,11 +4,9 @@
         <form action="" method="POST">
             {% csrf_token %}
             <h2 align = Center>Movie Search on Google </h2>
-            <h3 align = Center>(exact title) </h3>
-
 
             <p> <br><br></p>
-            <p align = Center><input type="search" class="span3" placeholder="Search movie's title" name="query" id="search" autofocus />  reviews </p>
+            <p align = Center><input type="search" class="span3" placeholder="Movie's title" name="query" id="search" autofocus />  </p>
             <p align = Center><button type="submit" class="btn btn-primary btn-large">Search &raquo;</button></p>
         </form>  
     {% else %}
@@ -49,11 +47,11 @@
 
 	<section>
         <div class="row">
-        <p align = Center><a href="{% url 'pgrank_view' searchterm_id  %}?scrape=False", align = Center >calculate page rank </a></p>
+        <p align = Center><a href="{% url 'pgrank_view' searchterm_id  %}?scrape=False", align = Center >Calculate page rank </a></p>
 	 <!--
 		<a href="/pg-rank/{{ searchterm_id }}">calculate page rank </a>
 	-->
-		<p align = Center><a href="{% url 'pgrank_view' searchterm_id %}?scrape=True", align = Center >scrape and calculate page rank (may take a long time) </a></p>
+		<p align = Center><a href="{% url 'pgrank_view' searchterm_id %}?scrape=True", align = Center >Scrape and calculate page rank </a></p>
 	</div>
 	</section>
 
